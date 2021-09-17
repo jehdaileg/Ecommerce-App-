@@ -1,0 +1,26 @@
+[
+
+      {
+        "nom": "Baffles X258",
+        "category_id": 2,
+        "description" : "Ce projecteur est un projecteur sans fil 2021",
+        "prix": 199,
+        "image" : "baffles.jpg"
+
+      }
+      ,
+
+
+      {
+        "nom": "Ampoules X258",
+        "category_id": 2,
+        "description" : "Ce projecteur est un projecteur sans fil 2021",
+        "prix": 114,
+        "image" : "ampoules.jpg"
+
+      }
+
+
+
+
+]

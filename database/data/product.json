@@ -1,0 +1,170 @@
+[
+
+    {
+
+        "nom": "projecteur Xperia",
+        "category_id": 2,
+        "description" : "Ce projecteur est un projecteur sans fil 2021",
+        "prix": 385
+
+
+
+    },
+
+    {
+
+
+        "nom": "Casques Sony",
+        "category_id": 2,
+        "description" : "Des casques puissants pour un son de boom, Modele 4558GXmS",
+        "prix": 80
+
+
+    },
+
+    {
+
+
+        "nom": "Macbook pro 2021",
+        "category_id": 2,
+        "description" : "Un ordinateur de la masion apple de derniere generation",
+        "prix": 1500
+
+
+    },
+
+    {
+
+
+        "nom": "IPhone 12",
+        "category_id": 2,
+        "description" : "Un telephone avec ram 12gb, autonomie 5heures fermes",
+        "prix": 750
+
+
+    },
+
+    {
+
+
+        "nom": "T-Shirt",
+        "category_id": 3,
+        "description" : "Ce t-shirt est impeccable avec une dentelle magique, Modele homme et femme",
+        "prix": 80
+
+
+    },
+
+    {
+
+
+        "nom": "Tricot Magique",
+        "category_id": 3,
+        "description" : "Ce t-shirt est impeccable avec une dentelle magique, Modele homme et femme",
+        "prix": 78
+
+
+    },
+
+    {
+
+
+        "nom": "Pantalon Homme",
+        "category_id": 3,
+        "description" : "Ce pantalon est impeccable avec une dentelle magique, Modele homme",
+        "prix": 250
+
+
+    },
+
+    {
+
+
+        "nom": "Chemise de gala",
+        "category_id": 3,
+        "description" : "Cette chemise est impeccable avec une dentelle magique, Modele homme et femme",
+        "prix": 280
+
+
+    },
+
+    {
+
+
+        "nom": "Pizza",
+        "category_id": 1,
+        "description" : "Un plat aux omellettes avec de la sardine pour trampin",
+        "prix": 17
+
+
+    },
+
+    {
+
+
+        "nom": "hamburger",
+        "category_id": 1,
+        "description" : "Un plat aux omellettes avec de la sardine pour trampin",
+        "prix": 20
+
+
+    },
+
+    {
+
+
+        "nom": "creme au chocolat",
+        "category_id": 1,
+        "description" : "Un plat aux omellettes avec de la sardine pour trampin",
+        "prix": 385
+
+
+    },
+
+    {
+
+
+        "nom": "Ecran plasma",
+        "category_id": 1,
+        "description" : "Cet ecran  est un ecran sans fil 2021",
+        "prix": 420
+
+
+    }
+    ,
+    {
+
+
+        "nom": "HDD",
+        "category_id": 2,
+        "description" : "Ce disque dur est un HDD sans fil 2021",
+        "prix": 80
+
+
+    },
+
+    {
+
+
+        "nom": "montre",
+        "category_id": 3,
+        "description" : "Cette montre  est une montre sans fil 2021",
+        "prix": 100
+
+
+    },
+
+    {
+
+
+        "nom": "routeur",
+        "category_id": 2,
+        "description" : "Ce routeur Model 4857GXMSw 100 metres distance",
+        "prix": 240
+
+
+    }
+
+
+
+]
