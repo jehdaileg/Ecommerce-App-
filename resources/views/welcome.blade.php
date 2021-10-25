@@ -10,7 +10,7 @@
 <div class="mx-auto mt-5 text-gray-800 md:mt-12 md:max-w-lg md:text-center lg:text-lg"> Nous assurons la satisfaction de nos clients dans l'achat et la vente des produits et des services en toute sécurité. Nous espérons que vous appréciez nos services. </div>
 <div class="flex flex-col items-center mt-12 text-center">
     <span class="relative inline-flex w-full md:w-auto">
-        <a href="" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 rounded-full">
+        <a href="/products" type="button" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 rounded-full">
             Acheter
         </a>
 

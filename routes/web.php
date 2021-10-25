@@ -2,14 +2,15 @@
 
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Backend\CartController;
-use App\Http\Controllers\Auth\RegisterController;
 
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\CategoryController;
-use App\Http\Controllers\Backend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::resource('/products', ProductController::class)->middleware('auth');
 
-Route::resource('/cart', CartController::class)->except('show');
+Route::resource('/cart', CartController::class)->except('show')->middleware('auth');
 
 
 
@@ -52,8 +53,24 @@ Route::resource('/categories', CategoryController::class);
 
 /* About payement */
 
-Route::get('/order/create', [OrderController::class, 'create'])->name('orders.index');
-Route::get('/order/capture', [OrderController::class, 'capture'])->name('orders.capture');
+/*Route::get('/order/create', [OrderController::class, 'create'])->name('orders.index');
+Route::get('/order/capture', [OrderController::class, 'capture'])->name('orders.capture');  */
+
+Route::get('/orders/capture', function () {
+    if (Session::has('cart')) {
+        foreach (Session::get('cart') as $key => $cart) {
+            Product::find($cart['id'])->update([
+                'quantity' => $cart['quantity'] - $cart['qty_panier']
+            ]);
+        }
+    }
+
+    //Session::flush();
+
+    return view('products.orders.capture');
+
+})->name('orders.capture');
+
 
 
 

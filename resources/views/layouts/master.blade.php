@@ -65,20 +65,28 @@
 
                         @auth
 
-                            <div class="relative inline-block">
+                        <div x-data="{ open: false }" class="ml-2 mb-0 relative">
+                            <div class="relative inline-block" @click="open = !open">
                                 <img class="inline-block object-cover w-12 h-12 rounded-full"
                                     src="{{ asset('storage/' . Auth::user()->image) }}" alt="Profile image" />
                                 <span
                                     class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-green-600 border-2 border-white rounded-full"></span>
                             </div>
 
-                            <form action="{{ route('logout') }}" method="post">
+
+                            <form action="{{ route('logout') }}" method="post" x-show="open" class="absolute">
                                 @csrf
 
                                 <button type="submit"
                                     class="p-1 lg:px-4 md:mx-2 text-indigo-600 text-center border border-solid border-indigo-600 rounded hover:bg-indigo-600 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1">Déconnexion</button>
 
                             </form>
+
+                        </div>
+
+
+
+
 
                         @endauth
 

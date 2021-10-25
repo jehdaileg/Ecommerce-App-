@@ -26,7 +26,7 @@ class ProductController extends Controller
     {
         //
 
-       $products = Product::latest()->paginate(12);
+       $products = Product::latest()->paginate(25);
 
 
         return view('products.index', compact('products'));

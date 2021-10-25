@@ -175,24 +175,15 @@
               </div>
 
 
-              <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" x-data="order" id="formOrder" x-ref="formOrder">
-                <input type="hidden" name="return" value="http://gahebeye.com/order/capture">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="sb-35jds7653950@business.example.com">
-                <input type="hidden" name="item_name" value="vente de chaussures ({{ collect(Session::get('cart'))->sum('qty_panier') }})">
-                <input type="hidden" name="item_number" value="Xd-173">
-                <input type="hidden" name="amount" value="{{ array_reduce(Session::get('cart'), fn ($c, $i) => $c + $i['prix'] * $i['qty_panier']) }}">
-                <input type="hidden" name="email" value="sb-9lwfe7657189@personal.example.com" <div class="mt-6 sm:max-w-xs sm:mx-auto">
 
-                @auth
-                <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full" name="submit">Confirmer et payer </button>
-                @endauth
-
-        </div>
-        </form>
 
 
             </div>
+          </div>
+
+          <div id="buttonContainer">
+
+
           </div>
 
       </section>
@@ -208,7 +199,38 @@
 
 </div>
 
+<!-- Update the PayPal JavaScript SDK with buttons and funding-eligibility -->
+<script src="https://www.paypal.com/sdk/js?client-id=AV-KatXE8IAcb3ohkwJUacPCdwxRaO2G0vd_uz9Ay93N55NLodLt6QhOE3G3P7uW6DcPCsKgr_9_BCtv&components=buttons,funding-eligibility"></script>
+<script>
 
+paypal.Buttons({
+            fundingSource: paypal.FUNDING.PAYPAL,
+
+            style: {
+                layout: 'vertical',
+                color: 'silver',
+                shape: 'pill',
+                label: 'paypal'
+            },
+
+            createOrder(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: {{ array_reduce(Session::get('cart'), fn($c, $i) => $c + $i['prix'] * $i['qty_panier']) }}
+                        }
+                    }]
+                });
+            },
+
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    window.location.replace("{{ route('orders.capture') }}")
+                });
+            }
+        }).render('#buttonContainer')
+
+;</script>
 
 
 @stop

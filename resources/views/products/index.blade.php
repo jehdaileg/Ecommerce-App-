@@ -78,7 +78,7 @@
                     @method('POST')
                     <input type="hidden" name="id" value="{{ $product->id }}">
 
-                    <button type="submit" class="transition duration-500 ease-in-out mx-0 bg-blue-500 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 text-white font-bold py-2 px-4 rounded">Ajouter au panier</button>
+                    <button type="submit" class="transition duration-500 ease-in-out mx-0 bg-indigo-200 hover:bg-red-500 transform hover:-translate-y-1 hover:scale-110 text-white font-bold py-2 px-4 rounded">Ajouter au panier</button>
                 </form>
 
               </div>
